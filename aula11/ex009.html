@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Nacionalidade</title>
+<style>
+    div {
+        background-color: pink;
+        font: normal 20px Tahoma;
+        width: 400px;
+        height: 200px;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 8px;
+        margin: auto;
+    }
+    div#res {
+        margin-top: 20px;
+        height: 100px;
+        background-color: plum;
+    }
+</style>
+</head>
+<body>
+    <div id='home'>
+    <h1>Detector de Nacionalidade</h1>
+    <p>Digite em que país você nasceu:</p>
+    <input type="text" name="nac" id="nac">
+    <input type="button" value="Enviar!" onclick="nacionalidade()">
+    </div>
+    <div id="res"></div>
+
+<script>
+function nacionalidade() {
+        var nac = document.querySelector('input#nac')
+        var res = document.querySelector('div#res')
+        var nac2 = nac.value
+            if (nac2 == "Brasil") {
+                res.innerHTML = `<p>Você nasceu no ${nac2}, então você é brasileiro(a).</p>`
+            } else { 
+                res.innerHTML = `<p>Você nasceu no ${nac2}, então você é estrangeiro(a).</p>`
+             }
+        res.innerHTML += `<p><strong>Obrigada por acessar o site!</strong></p>`
+}
+</script> 
+
+</body>
+</html>

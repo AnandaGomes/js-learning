@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule a sua idade!</title>
+<style>
+    body {
+        text-align:center;
+        margin-top: 50px;
+        background-color: rgb(238, 147, 218);
+    }
+    div { 
+        background: white;
+    }
+    div#res {
+        margin-top: 30px;
+    }
+
+</style>
+</head>
+<body>
+<div>
+<h1>Calcule a sua idade</h1> 
+</div>
+<p>Qual foi o ano do seu nascimento?</p>
+<input type="number" name="nasc" id="nasc">
+<p>Em que ano você está atualmente?</p>
+<input type="number" name="ano" id="ano">
+<input type="button" value="Enviar!" onclick="calcula()">
+<div id="res">
+
+</div>
+<script>
+function calcula() {
+var nasc = document.querySelector("input#nasc")
+var ano = document.getElementById("ano")
+var calc = Number(ano.value) - Number(nasc.value)
+var res = document.getElementById("res")
+res.innerHTML = `Você tem ${calc} anos de idade.`
+}
+</script>
+</body>
+</html>
