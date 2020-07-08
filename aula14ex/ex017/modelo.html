@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de exercício</title>
+    <title>Super Tabuada</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            Teste!
+            <p>Número: <input type="number" id="txtn">
+                <input type="button" value="Gerar tabuada!" onclick="tab()"></p>
         </div>
-        <div>
-
+        <div id='res'>
+            <select size="10" name="tabuada" id="seltab">
+            </select>
+            <br>
+            <input type="button" value="Limpar" onclick="limpaTela()"></p>
         </div>
     </section>
     <footer>
@@ -23,4 +29,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
